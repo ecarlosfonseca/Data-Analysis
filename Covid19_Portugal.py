@@ -172,7 +172,7 @@ p19.axis.minor_tick_line_color = None
 p19.outline_line_color = None
 
 # Pie Chart
-p_pie_data_1 = {'Infected': list(data['confirmados_m'])[-1],
+p_pie_data_1 = {'Infected': list(data['confirmados'])[-1],
                 'Recovered': list(data['recuperados'])[-1],
                 'Deceased': list(data['obitos'])[-1],
                 'Hospitalized': list(data['internados'])[-1],
