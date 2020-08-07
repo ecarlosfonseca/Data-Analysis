@@ -4,9 +4,6 @@ import seaborn as sns
 from itertools import tee
 
 import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
-import matplotlib.cm as cm
-import matplotlib as mpl
 
 url = 'https://raw.githubusercontent.com/ecarlosfonseca/DataSets/master/trade-indicators-for-portugal-1.csv'
 
@@ -38,7 +35,6 @@ df2 = pd.concat(chunk_arr2, axis=0)
 df2 = df2.reset_index()
 
 df2 = df2.pivot(index='year', columns='kpi')['value']
-print(df2.head())
 df2.plot()
 plt.show()
 
