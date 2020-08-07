@@ -41,6 +41,14 @@ print(df2.head())
 df2.plot()
 plt.show()
 
+corr_matrix = df2.corr()
+lower_triangle_mask = np.triu(np.ones(corr_matrix.shape)).astype(np.bool)
+cor_mat_lower = corr_matrix.mask(lower_triangle_mask)
 
+sns.heatmap(cor_mat_lower,
+            annot=False,
+            cmap='RdBu_r')
+
+plt.show()
 
 
