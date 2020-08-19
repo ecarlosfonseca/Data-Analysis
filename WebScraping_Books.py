@@ -50,7 +50,7 @@ while i <= 50:
 books_dict = {'Tile': titles_final_list, 'Rating': ratings_final_list, 'Prices': prices_final_list, 'Links': links_final_list}
 
 books_df = pd.DataFrame(books_dict)
-print(books_df['Links'][0])
+print(books_df.head())
 print(books_df.shape)
 
 # EDA
@@ -62,4 +62,4 @@ analysis_dict = {'variables': list(books_df.columns.values),
                  'n_uniques': list(books_df.nunique().values)}
 
 analysis = pd.DataFrame(analysis_dict)
-#print(analysis)
+print(analysis)
