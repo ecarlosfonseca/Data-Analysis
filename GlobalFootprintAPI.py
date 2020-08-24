@@ -10,7 +10,7 @@ base_url = 'http://api.footprintnetwork.org/v1/'
 
 # Making a get request for all years in the df
 response = requests.get(base_url + 'years',
-                        auth=HTTPBasicAuth('CarlosFonseca', 'XXXX'))
+                        auth=HTTPBasicAuth('CarlosFonseca', 'XXXXX'))
 
 # Making df with years
 years_df = pd.DataFrame(response.json()).set_index('id').drop(columns=['version'])
@@ -25,7 +25,7 @@ countries_df = pd.DataFrame(response.json()).set_index('id')
 for year in years_df.values:
     print(str(year[0]))
     response = requests.get(base_url + 'data/all/' + str(year[0]),
-                            auth=HTTPBasicAuth('CarlosFonseca', '168O0I4p30qa2sgMkAbu20rLv1Hjqu557G6hhtdf6445bO8a9j9M'))
+                            auth=HTTPBasicAuth('CarlosFonseca', 'XXXXX'))
 
     print(response)
     aux_df = pd.DataFrame(response.json()).set_index('id')
