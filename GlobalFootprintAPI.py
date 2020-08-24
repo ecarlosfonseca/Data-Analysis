@@ -17,7 +17,7 @@ years_df = pd.DataFrame(response.json()).set_index('id').drop(columns=['version'
 
 # Making df with all countries for 1st year
 response = requests.get(base_url + 'data/all/' + str(years_df.values[0][0]),
-                        auth=HTTPBasicAuth('CarlosFonseca', '168O0I4p30qa2sgMkAbu20rLv1Hjqu557G6hhtdf6445bO8a9j9M'))
+                        auth=HTTPBasicAuth('CarlosFonseca', 'XXXXX'))
 
 countries_df = pd.DataFrame(response.json()).set_index('id')
 
