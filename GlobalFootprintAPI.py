@@ -46,11 +46,22 @@ analysis_dict = {'variables': list(countries_df.columns.values),
 analysis = pd.DataFrame(analysis_dict)
 print(analysis)
 
-portugal_land_type_df = countries_df[countries_df['countryName'] == 'Brazil'].\
-    drop(columns=['countryCode', 'countryName', 'shortName', 'isoa2', 'record', 'fishingGround', 'builtupLand',
-                  'carbon', 'value', 'score']).set_index('year')
+brazil_land_type_df = countries_df.loc[countries_df['countryName'] == 'Brazil', ['year', 'cropLand', 'grazingLand', 'forestLand']].set_index('year')
+ax1 = sns.lineplot(data=brazil_land_type_df, ci=None, legend='brief')
+ax1.set_title('Brazil ground types areas evolution over the years')
+ax1.set_ylabel('Areas (gha)')
+ax1.set_xlabel('Years')
+plt.show()
 
-sns.lineplot(data=portugal_land_type_df, ci=None, legend='brief')
+fishingGround_df = countries_df.loc[(countries_df['year'] == 2016) & (countries_df['record'] == 'AreaTotHA'), ['countryName', 'fishingGround']].nlargest(40, 'fishingGround')
+ax2 = sns.barplot(x='fishingGround', y='countryName', data=fishingGround_df)
+ax2.set_title('2016 world top40 fishing ground')
+ax2.set_xlabel('Fishing Ground (gha)')
+plt.show()
+
+portugal_area_df = countries_df.loc[(countries_df['countryName'] == 'Portugal') & (countries_df['year'] == 2016) & (countries_df['record'] == 'AreaTotHA'), ['cropLand', 'grazingLand', 'forestLand']].T
+ax3 = portugal_area_df.plot.pie(y=160552, title='Portugal 2016 ground types area', legend=False)
+ax3.set_ylabel('')
 plt.show()
 
 
