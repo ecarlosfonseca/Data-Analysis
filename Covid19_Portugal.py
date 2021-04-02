@@ -38,7 +38,7 @@ p2.line(list(range(len(data['obitos']))), data['obitos_acores'] + data['obitos_m
 p2.legend.location = 'top_left'
 
 # Data per region for tab 2
-p3 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Number of people', title='North',
+p3 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Number of people', title='North',
             toolbar_location=None)
 p3.line(list(range(len(data['confirmados']))), data['confirmados_arsnorte'], color='orange', legend='Infected')
 p3.line(list(range(len(data['obitos']))), data['obitos_arsnorte'], color='red', legend='Deceased')
@@ -46,7 +46,7 @@ p3.legend.location = 'top_left'
 p3.add_layout(Label(x=10, y=430, text='Total Population: 3.818.722 ppl  35,9%', x_units='screen', y_units='screen',
                     background_fill_color='white', background_fill_alpha=1.0))
 
-p4 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Number of people', title='Center',
+p4 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Number of people', title='Center',
             toolbar_location=None)
 p4.line(list(range(len(data['confirmados']))), data['confirmados_arscentro'], color='orange', legend='Infected')
 p4.line(list(range(len(data['obitos']))), data['obitos_arscentro'], color='red', legend='Deceased')
@@ -54,7 +54,7 @@ p4.legend.location = 'top_left'
 p4.add_layout(Label(x=10, y=430, text='Total Population: 2.348.453 ppl  22,1%', x_units='screen', y_units='screen',
                     background_fill_color='white', background_fill_alpha=1.0))
 
-p5 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Number of people', title='Lisbon and Tejo valey',
+p5 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Number of people', title='Lisbon and Tejo valey',
             y_range=p3.y_range, toolbar_location=None)
 p5.line(list(range(len(data['confirmados']))), data['confirmados_arslvt'], color='orange', legend='Infected')
 p5.line(list(range(len(data['obitos']))), data['obitos_arslvt'], color='red', legend='Deceased')
@@ -62,7 +62,7 @@ p5.legend.location = 'top_left'
 p5.add_layout(Label(x=10, y=430, text='Total Population: 2.808.414 ppl  26,4%', x_units='screen', y_units='screen',
                     background_fill_color='white', background_fill_alpha=1.0))
 
-p6 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Number of people', title='South',
+p6 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Number of people', title='South',
             toolbar_location=None)
 p6.line(list(range(len(data['confirmados']))), data['confirmados_arsalentejo'] + data['confirmados_arsalgarve'],
         color='orange', legend='Infected')
@@ -72,7 +72,7 @@ p6.legend.location = 'top_left'
 p6.add_layout(Label(x=10, y=430, text='Total Population: 1.171.547 ppl  11%', x_units='screen', y_units='screen',
                     background_fill_color='white', background_fill_alpha=1.0))
 
-p7 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Number of people', title='Madeira e Açores',
+p7 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Number of people', title='Madeira e Açores',
             y_range=p6.y_range, toolbar_location=None)
 p7.line(list(range(len(data['confirmados']))), data['confirmados_acores'] + data['confirmados_madeira'], color='orange',
         legend='Infected')
@@ -84,19 +84,19 @@ p7.add_layout(
           background_fill_color='white', background_fill_alpha=1.0))
 
 # Data per gender for tab 3
-p8 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Percentage of population infected infected',
+p8 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Percentage of population infected infected',
             title='Infected', toolbar_location=None)
 p8.line(list(range(len(data['confirmados']))), data['confirmados_f'] * 100 / 10636154, color='pink', legend='Female')
 p8.line(list(range(len(data['confirmados']))), data['confirmados_m'] * 100 / 10636154, color='skyblue', legend='Male')
 p8.legend.location = 'top_left'
 
-p9 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Percentage of population infected infected',
+p9 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Percentage of population infected infected',
             title='Deceased', toolbar_location=None)
 p9.line(list(range(len(data['confirmados']))), data['obitos_f'] * 100 / 10636154, color='pink', legend='Female')
 p9.line(list(range(len(data['confirmados']))), data['obitos_m'] * 100 / 10636154, color='skyblue', legend='Male')
 p9.legend.location = 'top_left'
 
-p10 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Percentage of population infected infected',
+p10 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Percentage of population infected infected',
              title='Age 0 to 9', toolbar_location=None)
 p10.line(list(range(len(data['confirmados']))), data['confirmados_0_9_f'] * 100 / 10636154, color='pink',
          legend='Female')
@@ -104,7 +104,7 @@ p10.line(list(range(len(data['confirmados']))), data['confirmados_0_9_m'] * 100 
          legend='Male')
 p10.legend.location = 'top_left'
 
-p11 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Percentage of population infected infected',
+p11 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Percentage of population infected infected',
              title='Age 10 to 19', toolbar_location=None)
 p11.line(list(range(len(data['confirmados']))), data['confirmados_10_19_f'] * 100 / 10636154, color='pink',
          legend='Female')
@@ -112,7 +112,7 @@ p11.line(list(range(len(data['confirmados']))), data['confirmados_10_19_m'] * 10
          legend='Male')
 p11.legend.location = 'top_left'
 
-p12 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Percentage of population infected infected',
+p12 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Percentage of population infected infected',
              title='Age 20 to 29', toolbar_location=None)
 p12.line(list(range(len(data['confirmados']))), data['confirmados_20_29_f'] * 100 / 10636154, color='pink',
          legend='Female')
@@ -120,7 +120,7 @@ p12.line(list(range(len(data['confirmados']))), data['confirmados_20_29_m'] * 10
          legend='Male')
 p12.legend.location = 'top_left'
 
-p13 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Percentage of population infected infected',
+p13 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Percentage of population infected infected',
              title='Age 30 to 39', toolbar_location=None)
 p13.line(list(range(len(data['confirmados']))), data['confirmados_30_39_f'] * 100 / 10636154, color='pink',
          legend='Female')
@@ -130,7 +130,7 @@ p13.legend.location = 'top_left'
 
 p12.y_range = p13.y_range
 
-p14 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Percentage of population infected infected',
+p14 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Percentage of population infected infected',
              title='Age 40 to 49', toolbar_location=None)
 p14.line(list(range(len(data['confirmados']))), data['confirmados_40_49_f'] * 100 / 10636154, color='pink',
          legend='Female')
@@ -138,7 +138,7 @@ p14.line(list(range(len(data['confirmados']))), data['confirmados_40_49_m'] * 10
          legend='Male')
 p14.legend.location = 'top_left'
 
-p15 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Percentage of population infected infected',
+p15 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Percentage of population infected infected',
              title='Age 50 to 59', toolbar_location=None)
 p15.line(list(range(len(data['confirmados']))), data['confirmados_50_59_f'] * 100 / 10636154, color='pink',
          legend='Female')
@@ -148,7 +148,7 @@ p15.legend.location = 'top_left'
 
 p14.y_range = p15.y_range
 
-p16 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Percentage of population infected infected',
+p16 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Percentage of population infected infected',
              title='Age 60 to 69', toolbar_location=None)
 p16.line(list(range(len(data['confirmados']))), data['confirmados_60_69_f'] * 100 / 10636154, color='pink',
          legend='Female')
@@ -156,7 +156,7 @@ p16.line(list(range(len(data['confirmados']))), data['confirmados_60_69_m'] * 10
          legend='Male')
 p16.legend.location = 'top_left'
 
-p17 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Percentage of population infected infected',
+p17 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Percentage of population infected infected',
              title='Age 70 to 79', toolbar_location=None)
 p17.line(list(range(len(data['confirmados']))), data['confirmados_70_79_f'] * 100 / 10636154, color='pink',
          legend='Female')
@@ -166,7 +166,7 @@ p17.legend.location = 'top_left'
 
 p16.y_range = p17.y_range
 
-p18 = figure(x_axis_label='Days (from the 26th Feb)', y_axis_label='Percentage of population infected infected',
+p18 = figure(x_axis_label='Days (from the 26th Feb 2020)', y_axis_label='Percentage of population infected infected',
              title='Age 80 Plus', toolbar_location=None)
 p18.line(list(range(len(data['confirmados']))), data['confirmados_80_plus_f'] * 100 / 10636154, color='pink',
          legend='Female')
@@ -187,10 +187,10 @@ p19 = figure(x_range=p_bar_tags, title='Covid19 Portugal Current Numbers', tools
              toolbar_location=None)
 p19.vbar_stack(p_bar_y_data, x='Type', width=0.9, fill_color=pie_colors, source=p_bar_data, legend_label=p_bar_y_data,
                line_color='white')
-p19.add_layout(Label(x=250, y=380, text='Lack of data for gender distribution', x_units='screen', y_units='screen',
+p19.add_layout(Label(x=275, y=380, text='Lack of data for gender distribution', x_units='screen', y_units='screen',
                      background_fill_color='white', background_fill_alpha=1.0, ))
-p19.add_layout(Arrow(x_start=2.5, y_start=22500, x_end=1.5, y_end=18637))
-p19.add_layout(Arrow(x_start=2.5, y_start=22500, x_end=3.5, y_end=512))
+p19.add_layout(Arrow(x_start=2.5, y_start=550000, x_end=1.5, y_end=18637))
+p19.add_layout(Arrow(x_start=2.5, y_start=550000, x_end=3.5, y_end=512))
 p19.y_range.start = 0
 p19.legend.location = "top_right"
 p19.xgrid.grid_line_color = None
